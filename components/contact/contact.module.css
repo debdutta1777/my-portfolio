@@ -1,0 +1,57 @@
+.section { position: relative; isolation: isolate; background: #f4ebd9; color: #2a241e; }
+.inner { width: min(100%, 88rem); min-height: 100svh; margin-inline: auto; padding: calc(var(--nav-height) + clamp(3rem, 7vw, 6rem)) var(--gutter) clamp(4rem, 8vw, 7rem); display: grid; grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr); align-items: center; gap: clamp(3rem, 6vw, 7rem); }
+.embedded .inner { min-height: min(88svh, 55rem); padding-top: clamp(4.5rem, 8vw, 8rem); }
+.intro { max-width: 34rem; }
+.eyebrow, .cardLabel, .cardFoot { font-family: var(--sans); font-size: .68rem; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow { color: #a24f33; }
+.intro :is(h1, h2) { margin-top: 1.15rem; font: 520 clamp(4.7rem, 9vw, 9rem)/.88 var(--serif); letter-spacing: -.075em; text-wrap: balance; }
+.intro h1 em, .intro h2 em { color: #a64e32; font-weight: 450; }
+.intro p { max-width: 27rem; margin-top: clamp(1.5rem, 3vw, 2.5rem); color: #5f5448; font: 400 clamp(1rem, 1.3vw, 1.13rem)/1.65 var(--sans); }
+.squiggle { display: block; width: 5.5rem; height: 1.1rem; margin-top: 2.2rem; border-bottom: 2px solid #b95535; border-radius: 0 0 55% 35%; transform: rotate(-6deg); }
+.postcard { position: relative; width: 100%; min-height: clamp(25rem, 34vw, 31rem); padding: clamp(2rem, 3.5vw, 3.5rem); border: 1px solid #b7a78d; background: radial-gradient(circle at 30% 26%, #ffffff39, transparent 42%), repeating-linear-gradient(125deg, #755a3610 0 1px, transparent 1px 5px), #fbf2df; box-shadow: 1px 2px 0 #efe1c9, 3px 4px 0 #b9a689, 13px 18px 30px #5a422c2d; transform: rotate(-2.2deg); }
+.postcard::before { content: ''; position: absolute; inset: .8rem; border: 1px solid #a28d6b42; pointer-events: none; }
+.cardContent { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); min-height: 22rem; gap: clamp(1.3rem, 3vw, 3rem); align-items: stretch; }
+.message { display: flex; flex-direction: column; justify-content: center; padding-right: clamp(.8rem, 2vw, 2rem); border-right: 1px solid #b6a88f; }
+.cardLabel { color: #97735b; }
+.message p { margin-top: 2rem; font: italic 450 clamp(1.65rem, 2.6vw, 2.65rem)/1.08 var(--serif); letter-spacing: -.03em; }
+.signature { margin-top: 2.4rem; color: #a75034; font: italic 500 1.5rem/1 var(--serif); }
+.address { display: flex; flex-direction: column; justify-content: flex-end; padding: 6.3rem 0 1rem; }
+.address > .cardLabel { margin-bottom: 1.2rem; }
+.contactLink { position: relative; display: grid; gap: .12rem; min-width: 0; padding: .68rem .15rem .72rem; border-bottom: 1px solid #b6a88f; color: #2a241e; text-decoration: none; }
+.contactLink::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: #b95535; transform: scaleX(0); transform-origin: left; transition: transform .55s cubic-bezier(.2,.8,.2,1); }
+.contactLink:is(:hover, :focus-visible)::after { transform: scaleX(1); }
+.contactLink:focus-visible { outline: 2px solid #a24f33; outline-offset: 4px; }
+.linkLabel { color: #806f5f; font-size: .69rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.linkValue { display: flex; align-items: center; justify-content: space-between; gap: .6rem; min-width: 0; font-size: clamp(.85rem, 1.1vw, 1rem); font-weight: 500; overflow-wrap: anywhere; }
+.linkValue svg { flex: none; color: #a75034; }
+.stamp { position: absolute; z-index: 2; top: 1.55rem; right: 1.6rem; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 5.7rem; height: 6.6rem; color: #89452f; background: #eadbbf; border: 6px dotted #fbf2df; outline: 1px solid #9f816453; box-shadow: 2px 3px 6px #51422d33; transform: rotate(-4deg); }
+.stamp > span { font: 600 2.2rem/1 var(--serif); letter-spacing: -.07em; }
+.stamp small { margin-top: .5rem; font-size: .47rem; font-weight: 650; letter-spacing: .08em; }
+.postmark { position: absolute; z-index: 1; top: 4.7rem; right: 6.9rem; display: grid; place-content: center; width: 5.5rem; height: 5.5rem; border: 1px solid #875e4a6b; border-radius: 50%; color: #875e4a9c; text-align: center; transform: rotate(-16deg); }
+.postmark span:first-child { font: 550 1.6rem/1 var(--serif); }
+.postmark span:last-child { font-size: .48rem; letter-spacing: .08em; }
+.cardFoot { position: absolute; bottom: 1.2rem; left: clamp(2rem, 3.5vw, 3.5rem); color: #a6947c; font-size: .56rem; }
+@media (max-width: 1000px) {
+  .inner { grid-template-columns: 1fr; gap: 3rem; }
+  .intro { max-width: 45rem; }
+  .postcard { max-width: 47rem; margin-inline: auto; }
+}
+@media (max-width: 600px) {
+  .inner { min-height: 100svh; padding-top: calc(var(--nav-height) + 3rem); padding-bottom: 4rem; gap: 2.6rem; }
+  .embedded .inner { padding-top: 4rem; }
+  .intro :is(h1, h2) { font-size: clamp(4.4rem, 18vw, 6.5rem); }
+  .intro p { margin-top: 1.1rem; }
+  .squiggle { margin-top: 1.2rem; }
+  .postcard { min-height: 0; padding: 2rem 1.5rem 3.1rem; transform: rotate(-1.4deg); }
+  .postcard::before { inset: .5rem; }
+  .cardContent { grid-template-columns: 1fr; min-height: 0; gap: 1.5rem; }
+  .message { min-height: 12.5rem; padding-right: 6rem; border-right: 0; border-bottom: 1px solid #b6a88f; }
+  .message p { margin-top: 1.3rem; font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
+  .signature { margin: 1rem 0 1.5rem; }
+  .address { padding: 0 0 .5rem; }
+  .stamp { top: 1.35rem; right: 1.2rem; width: 4.4rem; height: 5.1rem; }
+  .stamp > span { font-size: 1.7rem; }
+  .postmark { top: 3.2rem; right: 4.5rem; width: 4.5rem; height: 4.5rem; }
+  .cardFoot { left: 1.5rem; bottom: .9rem; font-size: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .contactLink::after { transition: none; } }

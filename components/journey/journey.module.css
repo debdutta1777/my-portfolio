@@ -1,0 +1,62 @@
+.section { background: #d9dfc9; color: #37382c; }
+.inner { width: min(100%, 82rem); margin-inline: auto; padding: clamp(3.8rem, 8vw, 7.5rem) var(--gutter) clamp(3rem, 8vw, 7rem); }
+.standalone { padding-top: calc(var(--nav-height) + clamp(3.8rem, 8vw, 7.5rem)); }
+.header { padding-bottom: clamp(2.3rem, 5vw, 4.4rem); }
+.header :is(h1, h2) { font: 540 clamp(3.4rem, 8.3vw, 8rem)/.98 var(--serif); letter-spacing: -.065em; }
+.paper {
+  position: relative;
+  border: 1px solid #74684748;
+  background: repeating-linear-gradient(0deg, transparent 0 31px, #82715016 31px 32px), #f4ebd9;
+}
+.route { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.guide, .ink { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.guide { stroke: #88613a68; stroke-width: 1; stroke-dasharray: 3 7; }
+.ink { stroke: #ad5337; stroke-width: 2; }
+.traveler { fill: #ad5337; filter: drop-shadow(0 1px 2px #714e394b); }
+.milestones { position: relative; list-style: none; }
+.milestone { display: grid; grid-template-columns: minmax(0,1fr) 2.2rem minmax(0,1fr); align-items: center; min-height: clamp(20rem, 29vw, 25rem); padding: 2.1rem clamp(1.25rem, 6vw, 5rem); gap: 1.3rem; }
+.year { grid-column: 3; grid-row: 1; justify-self: center; color: #79644842; font: 530 clamp(3.3rem, 10vw, 7.5rem)/.9 var(--serif); letter-spacing: -.07em; transition: color .35s; transform-origin: center; }
+.milestone[data-active='true'] .year { color: #825d4290; }
+.stamp { grid-column: 2; grid-row: 1; justify-self: center; display: grid; place-items: center; width: 2.3rem; aspect-ratio: 1; background: #f4ebd9; border: 1px solid #9d452b; outline: 3px solid #f4ebd9; border-radius: 50%; color: #823a26; font: 650 1.05rem/1 var(--serif); box-shadow: 0 0 0 0 #ad533730; transition: background .35s, box-shadow .35s; }
+.milestone[data-active='true'] .stamp { background: #f9dfc4; box-shadow: 0 0 0 7px #ad533720; }
+.record { grid-column: 1; grid-row: 1; justify-self: end; width: min(100%, 25rem); padding: clamp(1rem, 2.4vw, 1.5rem); border: 1px solid #7c6b4e60; background: #faf0dc; box-shadow: .25rem .28rem 0 #87623f19; transform-origin: top; }
+.milestone:nth-child(even) .record { grid-column: 3; justify-self: start; }
+.milestone:nth-child(even) .year { grid-column: 1; }
+.label { color: #823a26; font-weight: 650; font-size: .69rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.5; }
+.record summary { display: flex; align-items: center; justify-content: space-between; gap: .6rem; cursor: pointer; list-style: none; min-height: 44px; padding-block: .3rem; font: 550 clamp(1.35rem, 2.45vw, 2.05rem)/1.12 var(--serif); text-wrap: balance; }
+.record summary::-webkit-details-marker { display: none; }
+.record summary svg { color: #9d452b; flex: none; transition: rotate .25s; }
+.record details[open] summary svg { rotate: 45deg; }
+.record p { font-size: .86rem; line-height: 1.55; color: #514b3a; overflow-wrap: anywhere; }
+.detail { padding: .15rem 0 .7rem; display: grid; gap: .42rem; }
+.record details::details-content { transition: height .3s ease, opacity .3s ease, content-visibility .3s ease; height: 0; opacity: 0; overflow: hidden; }
+.record details[open]::details-content { height: auto; opacity: 1; }
+.summary { border-top: 1px solid #74684748; padding-top: .65rem; }
+.photo { margin-top: .9rem; padding: .35rem .35rem .45rem; background: #fff8e9; border: 1px solid #8c795b4a; box-shadow: 2px 3px 0 #7963481e; transform: rotate(-.6deg); }
+.photo img { display: block; width: 100%; height: clamp(7.5rem, 12vw, 9.5rem); object-fit: cover; background: #e9dfcb; }
+.photo figcaption { padding: .45rem .3rem .05rem; color: #786755; font: italic 500 .83rem/1.2 var(--serif); }
+.links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: .75rem; }
+.links a { display: inline-flex; align-items: center; gap: .25rem; min-height: 32px; color: #823a26; font-size: .75rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.record :is(summary,a):focus-visible, .closing a:focus-visible { outline: 2px solid #9d452b; outline-offset: 3px; }
+.closing { text-align: center; margin-top: clamp(2.8rem, 7vw, 6rem); }
+.closing p { font: 530 clamp(2rem, 5.2vw, 5rem)/1 var(--serif); text-wrap: balance; letter-spacing: -.055em; }
+.closing em { color: #823a26; }
+.closing a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; margin-top: .6rem; color: #823a26; text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 900px) {
+  .milestone { padding-inline: 1.2rem; gap: .9rem; }
+  .record { width: min(100%, 22rem); }
+  .year { font-size: clamp(3.2rem, 9vw, 5.5rem); }
+}
+@media (max-width: 700px) {
+  .milestone { grid-template-columns: 1.6rem minmax(0,1fr); min-height: 18rem; padding: 1.5rem .8rem; gap: .85rem; }
+  .stamp { grid-column: 1; width: 1.55rem; outline-width: 1px; font-size: .8rem; }
+  .year { display: none; }
+  .milestone .record, .milestone:nth-child(even) .record { grid-column: 2; justify-self: stretch; width: 100%; }
+  .record { padding: 1rem; }
+  .record summary { font-size: clamp(1.3rem, 6vw, 1.8rem); }
+  .header { padding-bottom: 2.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .year, .stamp, .record summary svg, .record details::details-content { transition: none; }
+  .traveler { display: none; }
+}

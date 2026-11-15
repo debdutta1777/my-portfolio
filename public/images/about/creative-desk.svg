@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 430" role="img" aria-label="Sunlit sketchbook on a creative desk">
+  <defs>
+    <linearGradient id="desk" x2="1" y2="1"><stop stop-color="#e9dfc5"/><stop offset="1" stop-color="#cbbf9e"/></linearGradient>
+    <linearGradient id="light" x2=".8" y2="1"><stop stop-color="#fff9e8" stop-opacity=".85"/><stop offset="1" stop-color="#f7e4bd" stop-opacity="0"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <pattern id="grain" width="11" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".5" fill="#6e7158" opacity=".16"/><circle cx="9" cy="10" r=".5" fill="#986d50" opacity=".15"/></pattern>
+  </defs>
+  <rect width="560" height="430" fill="url(#desk)"/>
+  <path d="M0 0h310L80 430H0Z" fill="url(#light)"/>
+  <path d="M0 220 211 430M0 290 141 430M420 0 560 170" stroke="#715b43" stroke-width="23" opacity=".07" filter="url(#blur)"/>
+  <g transform="translate(40 106) rotate(-8 240 140)">
+    <rect x="66" y="33" width="418" height="296" rx="5" fill="#433f30" opacity=".13" filter="url(#blur)"/>
+    <rect x="55" y="20" width="418" height="296" rx="5" fill="#8c8065"/>
+    <rect x="63" y="13" width="404" height="292" rx="4" fill="#f4ebd6" stroke="#c1b498" stroke-width="3"/>
+    <path d="M264 14v290" stroke="#b7ab8e" stroke-width="4"/>
+    <path d="M272 28h178M272 53h178M272 78h178M272 103h178M272 128h178M272 153h178M272 178h178M272 203h178M272 228h178M272 253h178" stroke="#8c927b" stroke-opacity=".19"/>
+    <path d="M77 55h173M77 80h173M77 105h173M77 130h173M77 155h173M77 180h173M77 205h173M77 230h173M77 255h173" stroke="#8c927b" stroke-opacity=".19"/>
+    <g fill="none" stroke="#68745e" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M104 212c9-78 75-112 130-141M108 215c40-38 76-35 117-10M144 139c27-25 40-27 67-30" stroke-width="2.5"/>
+      <path d="M157 128c-34-31-42-29-51-27 6 23 19 30 39 29M183 110c-3-43 7-48 24-55 8 30-1 41-19 55M196 182c20-25 41-26 48-23-4 23-18 30-48 25" stroke-width="2"/>
+      <circle cx="125" cy="193" r="5" fill="#b95535" stroke="none"/>
+    </g>
+    <path d="M300 207c24-18 49-5 63-31 6-12 18-18 30-18M301 227c25-5 49 9 68-8 17-16 33-7 53-17" fill="none" stroke="#a45a3b" stroke-width="2.5"/>
+    <path d="M306 95h90M306 109h60M306 121h79" stroke="#a69c82" stroke-width="2"/>
+    <circle cx="401" cy="197" r="16" fill="none" stroke="#a45a3b" stroke-width="2"/>
+  </g>
+  <g transform="rotate(32 462 83)"><rect x="455" y="11" width="14" height="126" rx="4" fill="#945b3e"/><path d="M456 20h12M456 124h12" stroke="#e4c398" stroke-width="3"/><path d="m455 137 7 17 7-17Z" fill="#e9cfaa"/><path d="m460 151 2 6 2-6Z" fill="#3e3b32"/></g>
+  <path d="M44 62c31-7 55-22 63-49M53 81c25-4 37-15 50-30M494 356c-25-4-41-17-51-38" fill="none" stroke="#667153" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <path d="M70 50C47 38 42 28 47 18c17 1 27 10 27 28M79 42c3-28 16-37 28-41 5 21-5 35-28 44M62 73c-26 4-33-3-40-15 20-12 35-4 42 11M495 355c5-26 19-34 33-38 3 18-5 33-30 41" fill="#819078" opacity=".75"/>
+  <rect width="560" height="430" fill="url(#grain)"/>
+</svg>
